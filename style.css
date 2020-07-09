@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  color: white;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+
+header h1 {
+  font-weight: 400;
+}
+header,
+form {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
+  outline: none;
+  font-size: 2rem;
+}
+form button {
+  color: #d88771;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover,
+form button:focus {
+  background-color: #fda085;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+.todo .complete-btn,
+.todo .trash-btn {
+  font-size: 1rem;
+  background-color: #ff6f47;
+  padding: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.todo .complete-btn {
+  background-color: rgb(73, 204, 73);
+}
+
+.todo .trash-btn {
+  border-radius: 0 5px 5px 0;
+}
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  opacity: 0;
+  transform: rotateZ(20deg) translateY(8rem);
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6f47;
+  padding: 1rem 0.7rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.select:hover::after {
+  background-color: #eee;
+  color: #ff6f47;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    font-size: 1.3rem;
+  }
+
+  form {
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
